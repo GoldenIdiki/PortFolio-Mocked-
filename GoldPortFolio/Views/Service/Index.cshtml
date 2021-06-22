@@ -1,0 +1,127 @@
+﻿@model UpdateViewModel 
+
+
+<div class="row">
+    <div class="offset-3 col-md-6">
+        <form method="post" asp-controller="Service" asp-action="Index">
+            <fieldset class="border-success">
+                <Legend>Personal Information</Legend>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="@Model.Id"></label>
+                    <input asp-for="@Model.Id" class="form-control" />
+                    <span asp-validation-for="@Model.Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.FirstName"></label>
+                    <input asp-for="@Model.FirstName" class="form-control" />
+                    <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.LastName"></label>
+                    <input asp-for="@Model.LastName" class="form-control" />
+                    <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Profession"></label>
+                    <input asp-for="@Model.Profession" class="form-control" />
+                    <span asp-validation-for="@Model.Profession" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Qualification"></label>
+                    <input asp-for="@Model.Qualification" class="form-control" />
+                    <span asp-validation-for="@Model.Qualification" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.LinkedInUrl"></label>
+                    <input asp-for="@Model.LinkedInUrl" class="form-control" />
+                    <span asp-validation-for="@Model.LinkedInUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.GitHubUrl"></label>
+                    <input asp-for="@Model.GitHubUrl" class="form-control" />
+                    <span asp-validation-for="@Model.GitHubUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.PhoneNumber"></label>
+                    <input asp-for="@Model.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Email"></label>
+                    <input asp-for="@Model.Email" class="form-control" />
+                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+            <label asp-for="@Model.Password"></label>
+            <input type="password" asp-for="@Model.Password" class="form-control" />
+            <span asp-validation-for="@Model.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.ConfirmPassword"></label>
+            <input asp-for="@Model.ConfirmPassword" class="form-control" />
+            <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+        </div>*@
+            </fieldset>
+
+            
+        <fieldset>
+            <legend>Work Experience</legend>
+            <div class="form-group">
+                <label asp-for="@Model.CompanyName"></label>
+                <input asp-for="@Model.CompanyName" class="form-control" />
+                <span asp-validation-for="@Model.CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.JobTitle"></label>
+                <input asp-for="@Model.JobTitle" class="form-control" />
+                <span asp-validation-for="@Model.JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.JobDescription"></label>
+                <textarea asp-for="@Model.JobDescription" class="form-control"></textarea>
+                <span asp-validation-for="@Model.JobDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.YearStarted"></label>
+                <input asp-for="@Model.YearStarted" class="form-control" />
+                <span asp-validation-for="@Model.YearStarted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.YearEnded"></label>
+                <input asp-for="@Model.YearEnded" class="form-control" />
+                <span asp-validation-for="@Model.YearEnded" class="text-danger"></span>
+            </div>
+        </fieldset>
+
+
+            
+                <fieldset>
+                    <legend>Contact address</legend>
+                    <div class="form-group">
+                        <label asp-for="@Model.StreetName"></label>
+                        <input asp-for="@Model.StreetName" class="form-control" />
+                        <span asp-validation-for="@Model.StreetName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.City"></label>
+                        <input asp-for="@Model.City" class="form-control" />
+                        <span asp-validation-for="@Model.City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.State"></label>
+                        <input asp-for="@Model.State" class="form-control" />
+                        <span asp-validation-for="@Model.State" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Country"></label>
+                        <input asp-for="@Model.Country" class="form-control" />
+                        <span asp-validation-for="@Model.Country" class="text-danger"></span>
+                    </div>
+                </fieldset>
+
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
